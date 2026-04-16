@@ -30,6 +30,8 @@ from cryptography.fernet import Fernet
 from flask import Flask, request, jsonify, session, send_from_directory
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+from flask import send_file
+
 
 # Scapy - suppress output
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
@@ -405,7 +407,7 @@ def api_netinfo():
 # ─────────────────────────────────────────────
 @app.route("/")
 def index():
-    return send_from_directory( "index.html")
+    return send_file("index.html")
 
 # ─────────────────────────────────────────────
 # Startup checks
