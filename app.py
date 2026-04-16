@@ -405,7 +405,7 @@ def api_netinfo():
 # ─────────────────────────────────────────────
 @app.route("/")
 def index():
-    return send_from_directory("templates", "index.html")
+    return send_from_directory( "index.html")
 
 # ─────────────────────────────────────────────
 # Startup checks
